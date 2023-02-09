@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/itsaclock/static/css/main.4531b72b.css",
+    "main.js": "/itsaclock/static/js/main.c51bcaa8.js",
+    "static/js/787.33feb74d.chunk.js": "/itsaclock/static/js/787.33feb74d.chunk.js",
+    "index.html": "/itsaclock/index.html",
+    "main.4531b72b.css.map": "/itsaclock/static/css/main.4531b72b.css.map",
+    "main.c51bcaa8.js.map": "/itsaclock/static/js/main.c51bcaa8.js.map",
+    "787.33feb74d.chunk.js.map": "/itsaclock/static/js/787.33feb74d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4531b72b.css",
+    "static/js/main.c51bcaa8.js"
+  ]
+}
