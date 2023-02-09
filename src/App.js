@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+
+const Header = (props) =>{
+  let greeting = props.greeting;
+
+  return(
+    <header><h1 className='title'>{greeting}</h1></header>
+  );
+}
+
+const Clock = () =>{
+
+  const [time, setTime] = useState(new Date);
+  const [ampm, setAmpm] = useState("");
+
+  useEffect(() =>{
+
+    const i = setInterval(()=>{
+      setTime(new Date);
+      if(time.getHours() >= 12){
+        setAmpm("PM");
+      }
+      else{
+        setAmpm("AM");
+      }
+    }, 1000);
+    return () => clearInterval(i);
+  }, []
+  );
+
+  return(
+    <h1 className="time">{time.getHours()>12?time.getHours()-12:time.getHours()}:{time.getMinutes()} {ampm}</h1>
+  )
+
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <Header greeting="Current Time: "/>
+    <Clock />
+
     </div>
   );
 }
